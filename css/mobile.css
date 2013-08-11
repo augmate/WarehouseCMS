@@ -1,0 +1,89 @@
+/* 
+    Document   : mobile
+    Created on : 03-feb-2013, 8:35:51
+    Author     : damiles
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+body{
+    background: url(images/low_contrast_linen.png);/*hexabump.png*/
+}
+
+
+.navbar-fixed-top {
+    margin-bottom: 0px;
+}
+
+.form-actions {
+    padding: 19px 20px 0px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #e5e5e5;
+}
+.navbar{
+    background: transparent;
+    width: 60px;
+    height: 100%;
+    top:0px;
+    left:0px;
+    position:absolute;
+}
+.navbar .navbar-inner{
+    background:transparent;
+}
+.navbar .brand{
+    display:none;
+}
+#subnav{
+    display: none;
+}
+#page{
+    margin: 0 0 0 60px;
+    width: auto;
+    height:100%;
+    background: white;
+    overflow: scroll;
+    padding:0 40px;
+    -webkit-box-shadow:  0px 0px 20px 0px rgba(0, 0, 0, 1);
+    box-shadow:  0px 0px 20px 0px rgba(0, 0, 0, 1);
+}
+#login-form label{
+    display: none;
+}
+
+.navbar .container {
+    width: auto;
+}
+
+
+.map,#qrdecode_div{
+    background:white;
+    position:absolute;
+    right:0px;
+    top:0px;
+    height:100%;
+    width:85%;
+    -webkit-box-shadow:  0px 0px 20px 0px rgba(0, 0, 0, 1);
+    box-shadow:  0px 0px 20px 0px rgba(0, 0, 0, 1);
+}
+
+/*#qrfile{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 60px;
+    height: 50px;
+    z-index: 100000;
+    opacity: 0;
+}*/
+
+@media (min-width: 800px) {
+    #page{
+        margin-top:0px;
+    }
+}

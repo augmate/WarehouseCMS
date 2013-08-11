@@ -1,0 +1,290 @@
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+*/
+
+
+.dropdown-menu{
+  z-index:1040 !important;
+}
+.navbar-fixed-top{
+  z-index:1031 !important;
+}
+#pointer_div{
+  position:relative;
+}
+
+.cursorMap{
+  position:absolute;
+  background:#f00;
+  width:12px;
+  height:12px;
+  -webkit-border-radius: 6;
+       -moz-border-radius: 6;
+            border-radius: 6;
+    -webkit-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+       -moz-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+            box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+}
+
+#subnav{
+  top:40px !important;
+  z-index:1030 !important;
+  
+  background: #3F4553;
+  
+}
+#subnav .navbar-inner {
+     background-color: #3F4553;
+  background-image: none;
+}
+#subnav  .nav > li > a{
+    color: #ffffff;
+    text-shadow: none;
+}
+
+body.subnav
+{
+  padding-top:120px;
+}
+.footer {
+  padding: 30px 0;
+  margin-top: 50px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+}
+
+body{
+  padding-top: 80px;
+  font-family: 'Roboto', sans-serif;
+  font-size:13px;
+  background-color:#F1F5F8;
+  font-weight: 300;
+}
+
+section{
+  margin-top:20px;
+}
+
+.jumbotron::after {
+content: '';
+display: block;
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background: url(./images/pattern.png) repeat center center;
+opacity: .8;
+}
+
+.jumbotron {
+  position: relative;
+  padding: 20px 0;
+  color: #fff;
+  text-align: left;
+  text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+  background: #020031; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #020031 0%, #6d3353 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#508e31), color-stop(100%,#6d3353)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  #020031 0%,#508e31 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  #020031 0%,#508e31 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #020031 0%,#508e31 100%); /* IE10+ */
+  background: linear-gradient(45deg,  #020031 0%,#508e31 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#020031', endColorstr='#508e31',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+     -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+          box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+.jumbotron h1 {
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.jumbotron p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+/* Link styles (used on .masthead-links as well) */
+.jumbotron a {
+  color: #fff;
+  color: rgba(255,255,255,.5);
+  -webkit-transition: all .2s ease-in-out;
+     -moz-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+.jumbotron a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255,255,255,.25);
+}
+
+.row{
+  margin-left:0px !important;
+}
+
+.hr{
+  margin-bottom:20px;
+  padding-bottom: 60px;
+  background:url(./images/hr.png) no-repeat bottom center;
+}
+
+/** Nav bar **/
+.navbar-inverse .navbar-inner{
+  background-color: #24272E;
+  background-image: none;
+  border-color: #24272E;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#24272E', endColorstr='#24272E', GradientType=0);
+
+}
+
+.navbar .brand{
+    text-indent:-9999px;
+    background-image:url(./images/logo.png);
+    background-repeat: no-repeat;
+    background-position-y: 7px;
+    display:block;
+    float:left;
+    width:97px;
+}
+
+.product_descr_name,.product_view_location{
+    font-size: 26px;
+    margin-bottom:12px; 
+    display:block;  
+    font-weight: 100;
+}
+
+
+
+/**
+* Widgets boxes 
+*/
+.bootstrap-widget-header h3{
+    font-size:26px;
+    line-height:26px;
+    font-weight:100;
+    color:#2C3E50;
+}
+.bootstrap-widget-header{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    height: 46px;
+}
+.bootstrap-widget-header > [class^="icon-"], .bootstrap-widget-header > [class*=" icon-"]{
+    margin-top:-8px;
+}
+.bootstrap-widget-header+.bootstrap-widget-content{
+    background: transparent;
+    border:none;
+}
+.bootstrap-widget-header .bootstrap-toolbar{
+    margin-top:6px;
+}
+
+
+/* Table */
+.grid-view table.items th a,.table th, .table td{
+    font-size:15px;
+    font-weight: 300;
+}
+
+
+.fixmetop{
+    position: fixed;
+    top: 40px;
+    left: 0px;
+    width: 100%;
+    background: #F1F5F8;
+    -webkit-box-shadow:  0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+    box-shadow:  0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 979px){
+  .navbar-fixed-top {
+    margin-bottom: 0px !important;
+  }
+  body.subnav{
+    padding-top:0px;
+  }
+}
+
+.navbar-inverse .nav> li >a:hover>[class^="icon-"]{
+    background-image: url("./images/glyphicons-halflings-white.png");
+}
+
+@media (max-width: 979px){
+    body {
+    padding-top: 0;
+    }
+}
+
+
+/* Tablets 
+ --------------*/
+@media (max-width: 767px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0 ;
+  }
+
+  /* Widen masthead and social buttons to fill body padding */
+  .jumbotron {
+    padding: 40px 20px;
+    /*margin-top:   -20px; /* Offset bottom margin on .navbar */
+    margin-right: -20px;
+    margin-left:  -20px;
+  }
+  /* Downsize the jumbotrons */
+  .jumbotron h1 {
+    font-size: 40px;
+  }
+  .jumbotron p,
+  .jumbotron .btn {
+    font-size: 16px;
+  }
+}
+
+/* Landscape phones
+------------------------- */
+@media (max-width: 480px) {
+  /* Remove padding above jumbotron */
+  body {
+    padding-top: 0;
+  }
+
+  /* Change up some type stuff */
+  h2 small {
+    display: block;
+  }
+
+  /* Downsize the jumbotrons */
+ .jumbotron {
+    padding: 20px 10px;
+  }
+  
+  .jumbotron h1 {
+    font-size: 32px;
+  }
+  .jumbotron p,
+  .jumbotron .btn {
+    font-size: 14px;
+  }
+  .jumbotron .btn {
+    display: block;
+    margin: 0 auto;
+  }
+}

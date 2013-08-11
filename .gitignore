@@ -1,0 +1,15 @@
+# OSX files
+.DS_Store
+
+# temp files
+*~
+*.swp
+
+# Upload files
+upload/
+
+# Assets files
+assets/
+
+# Yii framework
+yii/
