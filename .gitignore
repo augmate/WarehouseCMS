@@ -13,3 +13,6 @@ assets/
 
 # Yii framework
 yii/
+
+# Yii application runtime log
+protected/runtime/application.log
