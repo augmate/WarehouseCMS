@@ -120,7 +120,7 @@ $this->breadcrumbs = array(
                     <span class="product_descr_name"><b>Name:</b> <?php echo $model->name ?></span>
                 </div>
                 <div class="row-fluid">
-                    <div class="span6"><b>Sku:</b> <?php echo $model->sku ?></div>
+                    <div class="span6"><b>Sku:</b> <?php echo $model->sku ?><br><img src='<?php echo Yii::app()->params['basePath'] ?>/barcode/upc-a.php?text=<?php echo $model->sku ?>' alt='UPC A barCode'/></div>
                     <div class="span6"><b>Price:</b> <?php echo $model->price ?></div>
                 </div>
                 <div class="row-fluid">

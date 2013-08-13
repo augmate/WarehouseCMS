@@ -1,15 +1,34 @@
-<div class="row">
-	<div class="span4"></div>
-	<div class="span4">
+<div class="row-fluid">
+    <div class="span9">
 
-
-		<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
+        	<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 			'id'=>'user-form',
 			'enableAjaxValidation'=>false,
 			'htmlOptions'=>array(
-		        'class'=>'well',
+		        'class'=>'',
 		      ),
 		)); ?>
+        
+                    <?php
+                    $box = $this->beginWidget('bootstrap.widgets.TbBox', array(
+                        'title' => 'User',
+                        'headerIcon' => 'icon-user',
+                        'htmlOptions'=>array('class'=>'fixme'),
+                        'headerButtons' => array(
+                            array(
+                                'class' => 'bootstrap.widgets.TbButtonGroup',
+                                'buttons' => array(
+                                    array(
+					'buttonType'=>'submit',
+					'type'=>'primary',
+					'label'=>$model->isNewRecord ? 'Create' : 'Save',
+                                    )
+                                ),
+                            ),
+                        ),
+
+                    ));
+                    ?>
 		
 			<p class="help-block">Fields with <span class="required">*</span> are required.</p>
 		
@@ -31,17 +50,11 @@
 			$user=User::model()->findByPk(Yii::app()->user->id);
 			echo $form->hiddenField($model,'Company_idCompany',array('value'=>$user->Company_idCompany)); ?>
 		
-			<div class="form-actions">
-				<?php $this->widget('bootstrap.widgets.TbButton', array(
-					'buttonType'=>'submit',
-					'type'=>'primary',
-					'label'=>$model->isNewRecord ? 'Create' : 'Save',
-				)); ?>
-			</div>
+			
 		
 		<?php $this->endWidget(); ?>
 
-		
+            <?php $this->endWidget(); ?>
 	</div>
-	<div class="span4"></div>
+	<div class="span3"><?php echo $this->renderPartial('/activity/index'); ?></div>
 </div>
