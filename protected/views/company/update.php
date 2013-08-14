@@ -16,10 +16,4 @@ $this->menu=array(
 $this->pageHeader=array("Company info", "Manage your company and information. Upload your logo and map.");
 $this->layout="main";
 ?>
-<div class="row-fluid">
-	<div class="span2"></div>
-	<div class="span8">
-		<?php echo $this->renderPartial('_form',array('model'=>$model)); ?>
-	</div>
-	<div class="span2"></div>
-</div>
+<?php echo $this->renderPartial('_form',array('model'=>$model)); ?>
