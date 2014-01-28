@@ -61,6 +61,20 @@ class Order extends CActiveRecord
 		return parent::model($className);
 	}
 
+	public static function resetOrders($user) 
+	{
+      $model = Order::model()->findAll("Company_idCompany=".$user->Company_idCompany);
+      foreach($model as $order){
+          $order->status=Order::NOT_STARTED;
+          $order->save();
+          $products =  OrderHasProduct::model()->findAll('Order_idOrder='.$order->idOrder);
+          foreach($products as $product){
+              $product->Picked=0;
+              $product->save();
+          }
+      }
+	}
+	
 	/**
 	 * @return string the associated database table name
 	 */

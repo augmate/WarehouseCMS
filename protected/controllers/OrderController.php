@@ -181,18 +181,19 @@ class OrderController extends Controller
 
         /* Reset all orders to put as status completed and qty products as 0 */
         public function actionReset(){
-		$user=User::model()->findByPk(Yii::app()->user->id);
-                $model =Order::model()->findAll("Company_idCompany=".$user->Company_idCompany);
-                foreach($model as $order){
-                    $order->status=Order::NOT_STARTED;
-                    $order->save();
-                    $products=  OrderHasProduct::model()->findAll('Order_idOrder='.$order->idOrder);
-                    foreach($products as $product){
-                        $product->Picked=0;
-                        $product->save();
-                    }
-                }
-                $this->render('reset');
+      		$user=User::model()->findByPk(Yii::app()->user->id);
+      		Order::resetOrders($user);
+//      		$model =Order::model()->findAll("Company_idCompany=".$user->Company_idCompany);
+//                foreach($model as $order){
+//                    $order->status=Order::NOT_STARTED;
+//                    $order->save();
+//                    $products=  OrderHasProduct::model()->findAll('Order_idOrder='.$order->idOrder);
+//                    foreach($products as $product){
+//                        $product->Picked=0;
+//                        $product->save();
+//                    }
+//                }
+          $this->render('reset');
         }
         
 	/**

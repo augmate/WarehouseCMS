@@ -51,11 +51,20 @@ class ApiController extends Controller
             if($order==null)  
                 $order = Order::model()->find(array('order'=>'date ASC','condition'=>"status = 0 and Company_idCompany=".$user->Company_idCompany));
             
-            //If no are more orders send a status 204
+            //If no are more orders, reset them for demo purposes
             if($order==null)
             {
+              Order::resetOrders($user);
+
+              $order = Order::model()->find(array('order'=>'date ASC','condition'=>"status = 0 and Company_idCompany=".$user->Company_idCompany));
+            		
+              if($order==null)
+              {
+                //If there are no more orders send a status 204
+                // This should never happen now, but just in case something goes wrong with reset...
                 $this->_sendResponse(204, sprintf('{"message":"No more orders available"}') );
                 exit;
+              }
             }
             $products=$order->productsQty;
             return array("order"=>$order,"products"=>$products);
