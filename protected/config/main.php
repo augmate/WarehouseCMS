@@ -132,7 +132,7 @@ return array(
   'params'=>array(
     // this is used in contact page
     'adminEmail'=>'info@augmate.com',
-    'basePath'=>'/warehouse/',
+    'basePath'=>'',
     //'basePath'=>'/warehouse/',
   ),
 );

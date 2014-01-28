@@ -66,7 +66,7 @@
 		$company=$user->company;
 		?>
 		<div id="pointer_div"  onClick='point_it(event)' >
-			<img style="position:absolute; top:0px: left:0px; max-width:none;" id='mapImage' src='<?php echo Yii::app()->params['basePath']?>upload/<?php echo $company->map ?>' alt='map' />
+			<img style="position:absolute; top:0px: left:0px; max-width:none;" id='mapImage' src='<?php echo Yii::app()->params['basePath']?>/upload/<?php echo $company->map ?>' alt='map' />
 			<div class="cursorMap" id="cursorMap" style="top:<?php echo $model->mapY-6;?>px; left:<?php echo $model->mapX-6;?>px;"></div>
 		</div>
 		<script>

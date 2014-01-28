@@ -24,6 +24,7 @@ $this->pageHeader = array("Manage Orders", "Create, view, update or delete your 
                 array(
                     'class' => 'bootstrap.widgets.TbButtonGroup',
                     'buttons' => array(
+                        array('label' => 'Reset Orders','type'=>'danger', 'url' => array('reset')),
                         array('label' => 'Create new Order', 'url' => array('create')),
                     ),
                 ),

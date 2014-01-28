@@ -31,7 +31,7 @@ class OrderController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin','delete','pickProduct'),
+				'actions'=>array('create','update','admin','delete','pickProduct','reset'),
 				'users'=>User::usernamesByRole(( User::ADMIN | User::OWNER | User::EMPLOYEE ), User::PERM_ORDER),
 			),
 			array('deny',  // deny all users
@@ -179,6 +179,22 @@ class OrderController extends Controller
             
         }
 
+        /* Reset all orders to put as status completed and qty products as 0 */
+        public function actionReset(){
+		$user=User::model()->findByPk(Yii::app()->user->id);
+                $model =Order::model()->findAll("Company_idCompany=".$user->Company_idCompany);
+                foreach($model as $order){
+                    $order->status=Order::NOT_STARTED;
+                    $order->save();
+                    $products=  OrderHasProduct::model()->findAll('Order_idOrder='.$order->idOrder);
+                    foreach($products as $product){
+                        $product->Picked=0;
+                        $product->save();
+                    }
+                }
+                $this->render('reset');
+        }
+        
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
